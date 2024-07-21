@@ -18,7 +18,7 @@ In this basic example, we've set three endpoints to test this feature using mult
 2. Go to [localhost:3010/slow-blocking](localhost:3010/slow-blocking) on the first tab
 3. Go to [localhost:3010/normal](localhost:3010/normal) on the second tab
 
-This will take some time to display "Slow non-blocking ..." text in the "/slow-non-blocking" tab, while keeping "/normal" tab waiting for response. Once finished the cpu-intensive task on "/slow-non-blocking" it will respond with the above mentioned text, and only after that "/normal" request will be executed and will respond with a "Normal" text.
+This will take some time to display "Slow blocking ..." text in the "/slow-blocking" tab, while keeping "/normal" tab waiting for response. Once finished the cpu-intensive task on "/slow-blocking" it will respond with the above mentioned text, and only after that "/normal" request will be executed and will respond with a "Normal" text.
 
 If we had executed "/normal" first and "/slow..." second (you can test it), we wouldn't have had to wait for "/slow-blocking" to finish to have the "/normal" tab response. We would receive "Normal" inmediately, and would have to wait for "/slow..." until it finish.
 
